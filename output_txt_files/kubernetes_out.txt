@@ -1,1 +1,20 @@
-<paste log output from Kubernetes-mediated prediction, here>
+$ minikube service ml-microservice-api
+
+|-----------|---------------------|-------------|----------------------------|
+| NAMESPACE |        NAME         | TARGET PORT |            URL             |
+|-----------|---------------------|-------------|----------------------------|
+| default   | ml-microservice-api |          80 | http://192.168.245.3:30611 |
+|-----------|---------------------|-------------|----------------------------|
+* Opening service default/ml-microservice-api in default browser...
+
+
+$ ./make_prediction.sh 192.168.245.3 30611
+
+Port: 30611
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   246  100    48  100   198   1600   6600 --:--:-- --:--:-- --:--:--  8200{
+  "prediction": [
+    20.35373177134412
+  ]
+}
