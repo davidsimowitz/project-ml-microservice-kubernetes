@@ -7,12 +7,12 @@
 # Create dockerpath
 dockerpath=ml-microservice-api
 
-# Step 2:  
+# Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username davidsimowitz
-docker tag ml-microservice-api davidsimowitz/ml-microservice-api:1.0
+docker tag ml-microservice-api davidsimowitz/ml-microservice-api:1.1
 
 # Step 3:
 # Push image to a docker repository
-docker push davidsimowitz/ml-microservice-api:1.0
+docker push davidsimowitz/ml-microservice-api:1.1
