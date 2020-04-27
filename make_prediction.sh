@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 # USAGE:
-# $ ./make_predictions.sh [HOST] [PORT]
+# $ ./make_predictions.sh [IP_ADDRESS] [PORT]
 #
 # Example:
 # $ ./make_prediction.sh 192.168.245.3 30611
 
-# HOST defaults to localhost
+# IP_ADDRESS defaults to localhost
 if [ $1 ]; then
-   HOST=$1
+   IP_ADDRESS=$1
  else
-   HOST="localhost"
+   IP_ADDRESS="localhost"
 fi
 
 # PORT defaults to 8000
@@ -44,4 +44,4 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST http://$HOST:$PORT/predict
+     -X POST http://$IP_ADDRESS:$PORT/predict
