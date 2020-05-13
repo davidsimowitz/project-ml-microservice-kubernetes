@@ -7,6 +7,7 @@ WORKDIR /ml-microservice-api
 ## Step 2:
 # Copy source code to working directory
 COPY . app.py /ml-microservice-api/
+COPY . model_data/*.joblib /ml-microservice-api/
 
 ## Step 3:
 # Install packages from requirements.txt
